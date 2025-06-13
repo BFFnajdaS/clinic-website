@@ -1,644 +1,861 @@
-<!-- Local Business Schema for Google visibility -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "HealthCare Plus Clinic",
-    "description": "Comprehensive medical care with experienced healthcare professionals",
-    "url": "https://healthcareplus-clinic.com",
-    "telephone": "+1-555-HEALTH",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 Medical Center Drive",
-        "addressLocality": "Your City",
-        "addressRegion": "State",
-        "postalCode": "12345"
-    },
-    "openingHours": [
-        "Mo-Fr 08:00-18:00",
-        "Sa 09:00-15:00"
-    ],
-    "priceRange": "$$"
-}
-</script>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Family Medical Center | Trusted Healthcare in Your Community</title>
+    <meta name="description" content="Comprehensive family healthcare services in Shah Alam. Book appointments online, meet our experienced doctors, and access quality medical care for all ages.">
     
-    body {
-        font-family: 'Arial', sans-serif;
-        line-height: 1.6;
-        color: #333;
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalOrganization",
+        "name": "Harmony Family Medical Center",
+        "description": "Comprehensive family healthcare services",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Wellness Boulevard",
+            "addressLocality": "Shah Alam",
+            "addressRegion": "Selangor",
+            "postalCode": "40000",
+            "addressCountry": "MY"
+        },
+        "telephone": "+60-3-5123-4567",
+        "url": "https://harmonyfmc.com",
+        "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-14:00"],
+        "medicalSpecialty": ["Family Medicine", "Pediatrics", "Women's Health", "Preventive Care"]
     }
+    </script>
     
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    
-    /* Header */
-    header {
-        background: #2c5aa0;
-        color: white;
-        padding: 1rem 0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-    
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    
-    .logo h1 {
-        font-size: 1.8rem;
-    }
-    
-    .contact-info {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-    }
-    
-    .contact-info span {
-        font-size: 0.9rem;
-    }
-    
-    .book-now-btn {
-        background: #ff6b35;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background 0.3s;
-    }
-    
-    .book-now-btn:hover {
-        background: #e55a2b;
-    }
-    
-    /* Hero Section */
-    .hero {
-        background: linear-gradient(rgba(44, 90, 160, 0.8), rgba(44, 90, 160, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23f0f8ff"/><circle cx="200" cy="150" r="50" fill="%23e3f2fd" opacity="0.5"/><circle cx="800" cy="400" r="80" fill="%23e8f5e8" opacity="0.3"/><circle cx="1000" cy="200" r="60" fill="%23fff3e0" opacity="0.4"/></svg>');
-        color: white;
-        padding: 80px 0;
-        text-align: center;
-    }
-    
-    .hero h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
-    
-    .hero p {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-    }
-    
-    .cta-buttons {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .btn {
-        padding: 12px 30px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: all 0.3s;
-    }
-    
-    .btn-primary {
-        background: #ff6b35;
-        color: white;
-    }
-    
-    .btn-secondary {
-        background: transparent;
-        color: white;
-        border: 2px solid white;
-    }
-    
-    .btn:hover {
-        transform: translateY(-2px);
-    }
-    
-    /* Trust Indicators */
-    .trust-indicators {
-        background: #f8f9fa;
-        padding: 60px 0;
-    }
-    
-    .trust-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-    }
-    
-    .trust-item {
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .trust-icon {
-        font-size: 3rem;
-        margin-bottom: 20px;
-    }
-    
-    /* Services */
-    .services {
-        padding: 60px 0;
-    }
-    
-    .section-title {
-        text-align: center;
-        font-size: 2.2rem;
-        margin-bottom: 50px;
-        color: #2c5aa0;
-    }
-    
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
-    
-    .service-card {
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        transition: transform 0.3s;
-    }
-    
-    .service-card:hover {
-        transform: translateY(-5px);
-    }
-    
-    /* Team */
-    .team {
-        background: #f8f9fa;
-        padding: 60px 0;
-    }
-    
-    .team-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-    }
-    
-    .team-member {
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .member-photo {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background: #ddd;
-        margin: 0 auto 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 3rem;
-        color: #666;
-    }
-    
-    /* Booking Section */
-    .booking {
-        padding: 60px 0;
-        background: #2c5aa0;
-        color: white;
-    }
-    
-    .booking-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-        align-items: center;
-    }
-    
-    .booking-form {
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        color: #333;
-    }
-    
-    .form-group {
-        margin-bottom: 20px;
-    }
-    
-    .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 1rem;
-    }
-    
-    .submit-btn {
-        background: #ff6b35;
-        color: white;
-        padding: 12px 30px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-        width: 100%;
-    }
-    
-    .submit-btn:hover {
-        background: #e55a2b;
-    }
-    
-    /* Testimonials */
-    .testimonials {
-        background: #f8f9fa;
-        padding: 60px 0;
-    }
-    
-    .testimonial-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
-    
-    .testimonial {
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .stars {
-        color: #ffc107;
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-    }
-    
-    /* Footer */
-    footer {
-        background: #333;
-        color: white;
-        padding: 40px 0;
-    }
-    
-    .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-    }
-    
-    .footer-section h3 {
-        margin-bottom: 20px;
-        color: #ff6b35;
-    }
-    
-    .footer-section p,
-    .footer-section li {
-        margin-bottom: 10px;
-    }
-    
-    .footer-section ul {
-        list-style: none;
-    }
-    
-    .footer-section a {
-        color: white;
-        text-decoration: none;
-    }
-    
-    .footer-section a:hover {
-        color: #ff6b35;
-    }
-    
-    /* Mobile Responsive */
-    @media (max-width: 768px) {
-        .header-content {
-            flex-direction: column;
-            gap: 15px;
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        .contact-info {
-            flex-direction: column;
-            gap: 10px;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
         }
         
-        .hero h2 {
-            font-size: 2rem;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
-        .booking-content {
-            grid-template-columns: 1fr;
+        /* Header & Navigation */
+        .top-bar {
+            background: #2c5282;
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
         }
         
-        .cta-buttons {
-            flex-direction: column;
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
         }
-    }
-</style>
+        
+        .emergency {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+        
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c5282;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #2c5282;
+        }
+        
+        .cta-btn {
+            background: #38a169;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .cta-btn:hover {
+            background: #2f855a;
+            transform: translateY(-1px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: #38a169;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 15px 30px;
+            border: 2px solid white;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Trust Indicators */
+        .trust-section {
+            background: white;
+            padding: 60px 0;
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .trust-item {
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .trust-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .trust-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #2c5282;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card h3 {
+            color: #2c5282;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        /* Team Section */
+        .team {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        
+        .team-member {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #666;
+        }
+        
+        .credentials {
+            color: #38a169;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: #2c5282;
+            color: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .testimonial {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #38a169;
+        }
+        
+        .rating {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .patient-name {
+            font-weight: bold;
+            margin-top: 15px;
+            color: #38a169;
+        }
+        
+        /* Booking Section */
+        .booking {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a202c;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            color: #38a169;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #38a169;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            color: #999;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .top-bar-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+        /* Accessibility Features */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Focus styles for keyboard navigation */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 2px solid #38a169;
+            outline-offset: 2px;
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .hero {
+                background: #000;
+            }
+            
+            .service-card, .team-member {
+                border: 2px solid #333;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div>📞 +60-3-5123-4567 | ✉️ info@harmonyfmc.com | 🕒 Mon-Fri: 8AM-6PM, Sat: 8AM-2PM</div>
+                <div class="emergency">🚨 EMERGENCIES: Call 999 or visit A&E</div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h1>🏥 HealthCare Plus Clinic</h1>
-                </div>
-                <div class="contact-info">
-                    <span>📞 +1-555-HEALTH</span>
-                    <span>📍 123 Medical Center Drive</span>
-                    <a href="#booking" class="book-now-btn">Book Appointment</a>
-                </div>
-            </div>
+            <nav>
+                <div class="logo">🏥 Harmony Family Medical</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Our Doctors</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#booking" class="cta-btn">Book Appointment</a>
+            </nav>
         </div>
     </header>
+
     <!-- Hero Section -->
-<section class="hero">
-    <div class="container">
-        <h2>Quality Healthcare You Can Trust</h2>
-        <p>Comprehensive medical services with compassionate care from experienced professionals</p>
-        <div class="cta-buttons">
-            <a href="#booking" class="btn btn-primary">Book Appointment Online</a>
-            <a href="#services" class="btn btn-secondary">Our Services</a>
-        </div>
-    </div>
-</section>
-
-<!-- Trust Indicators -->
-<section class="trust-indicators">
-    <div class="container">
-        <div class="trust-grid">
-            <div class="trust-item">
-                <div class="trust-icon">🏆</div>
-                <h3>15+ Years Experience</h3>
-                <p>Serving the community with trusted healthcare since 2010</p>
-            </div>
-            <div class="trust-item">
-                <div class="trust-icon">👨‍⚕️</div>
-                <h3>Board-Certified Doctors</h3>
-                <p>All our physicians are board-certified and continuously trained</p>
-            </div>
-            <div class="trust-item">
-                <div class="trust-icon">⭐</div>
-                <h3>5-Star Patient Reviews</h3>
-                <p>Over 500 positive reviews from satisfied patients</p>
-            </div>
-            <div class="trust-item">
-                <div class="trust-icon">🛡️</div>
-                <h3>Fully Accredited</h3>
-                <p>Licensed and accredited by state medical boards</p>
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Your Health, Our Priority</h1>
+            <p>Comprehensive family healthcare with compassionate, experienced doctors. Modern facilities, convenient online booking, and care you can trust.</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn-primary">Book Online Now</a>
+                <a href="#services" class="btn-secondary">Our Services</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Services -->
-<section class="services" id="services">
-    <div class="container">
-        <h2 class="section-title">Our Medical Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>🩺 General Medicine</h3>
-                <p>Comprehensive primary care including annual check-ups, preventive care, and treatment of common illnesses.</p>
-            </div>
-            <div class="service-card">
-                <h3>👨‍👩‍👧‍👦 Family Medicine</h3>
-                <p>Complete healthcare for the entire family, from pediatrics to geriatric care.</p>
-            </div>
-            <div class="service-card">
-                <h3>💉 Vaccinations</h3>
-                <p>Full range of immunizations for children and adults, including travel vaccines.</p>
-            </div>
-            <div class="service-card">
-                <h3>🩸 Laboratory Services</h3>
-                <p>On-site lab testing with quick results for blood work, urinalysis, and more.</p>
-            </div>
-            <div class="service-card">
-                <h3>🏃‍♂️ Sports Medicine</h3>
-                <p>Treatment and prevention of sports-related injuries with rehabilitation programs.</p>
-            </div>
-            <div class="service-card">
-                <h3>🩺 Chronic Disease Management</h3>
-                <p>Ongoing care for diabetes, hypertension, heart disease, and other chronic conditions.</p>
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">🏆</div>
+                    <h3>15+ Years Experience</h3>
+                    <p>Serving Shah Alam families with trusted medical care since 2009</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">👥</div>
+                    <h3>10,000+ Happy Patients</h3>
+                    <p>Join thousands who trust us with their family's health</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🔒</div>
+                    <h3>HIPAA Compliant</h3>
+                    <p>Your privacy and data security are our top priorities</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⭐</div>
+                    <h3>4.9/5 Star Rating</h3>
+                    <p>Consistently rated excellent by our patients</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Team -->
-<section class="team">
-    <div class="container">
-        <h2 class="section-title">Meet Our Medical Team</h2>
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="member-photo">👨‍⚕️</div>
-                <h3>Dr. Michael Johnson, MD</h3>
-                <p><strong>Chief Medical Officer</strong></p>
-                <p>Board-certified in Family Medicine with 20+ years experience. Graduated from Johns Hopkins Medical School.</p>
-            </div>
-            <div class="team-member">
-                <div class="member-photo">👩‍⚕️</div>
-                <h3>Dr. Sarah Chen, MD</h3>
-                <p><strong>Internal Medicine Specialist</strong></p>
-                <p>Specializes in preventive care and chronic disease management. Harvard Medical School graduate.</p>
-            </div>
-            <div class="team-member">
-                <div class="member-photo">👨‍⚕️</div>
-                <h3>Dr. Robert Williams, MD</h3>
-                <p><strong>Pediatrician</strong></p>
-                <p>Board-certified pediatrician with 15 years experience caring for children and adolescents.</p>
-            </div>
-            <div class="team-member">
-                <div class="member-photo">👩‍⚕️</div>
-                <h3>Lisa Martinez, NP</h3>
-                <p><strong>Nurse Practitioner</strong></p>
-                <p>Master's degree in Nursing with specialization in family health and wellness programs.</p>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Comprehensive Healthcare Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>👨‍👩‍👧‍👦 Family Medicine</h3>
+                    <p>Complete primary care for all ages, from newborns to seniors. Annual check-ups, vaccinations, chronic disease management, and preventive care.</p>
+                    <ul style="margin-top: 15px; color: #666;">
+                        <li>• Annual physical exams</li>
+                        <li>• Immunizations & vaccines</li>
+                        <li>• Chronic disease management</li>
+                        <li>• Health screenings</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>🧒 Pediatric Care</h3>
+                    <p>Specialized care for infants, children, and adolescents with child-friendly environment and experienced pediatric specialists.</p>
+                    <ul style="margin-top: 15px; color: #666;">
+                        <li>• Well-child visits</li>
+                        <li>• Growth & development tracking</li>
+                        <li>• Childhood illness treatment</li>
+                        <li>• School physical exams</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>👩 Women's Health</h3>
+                    <p>Comprehensive women's healthcare including routine screenings, family planning, and reproductive health services.</p>
+                    <ul style="margin-top: 15px; color: #666;">
+                        <li>• Annual gynecological exams</li>
+                        <li>• Pregnancy planning & care</li>
+                        <li>• Contraceptive counseling</li>
+                        <li>• Menopause management</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>🩺 Urgent Care</h3>
+                    <p>Walk-in care for non-emergency conditions when you need immediate attention but don't require emergency room care.</p>
+                    <ul style="margin-top: 15px; color: #666;">
+                        <li>• Minor injuries & burns</li>
+                        <li>• Cold & flu treatment</li>
+                        <li>• Skin conditions</li>
+                        <li>• Basic diagnostic tests</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>💻 Telehealth</h3>
+                    <p>Virtual consultations for your convenience. Get medical advice, prescription refills, and follow-up care from home.</p>
+                    <ul style="margin-top: 15px; color: #666;">
+                        <li>• Video consultations</li>
+                        <li>• Prescription refills</li>
+                        <li>• Follow-up appointments</li>
+                        <li>• Health monitoring</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>🔬 Lab Services</h3>
+                    <p>On-site laboratory services for quick, accurate results. Blood work, urine tests, and other diagnostics available.</p>
+                    <ul style="margin-top: 15px; color: #666;">
+                        <li>• Blood tests</li>
+                        <li>• Urine analysis</li>
+                        <li>• Cholesterol screening</li>
+                        <li>• Diabetes monitoring</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Booking Section -->
-<section class="booking" id="booking">
-    <div class="container">
-        <div class="booking-content">
-            <div class="booking-info">
-                <h2>Schedule Your Appointment</h2>
-                <p>Book online or call us directly. We offer same-day appointments for urgent care needs.</p>
-                
-                <h3>📞 Contact Information</h3>
-                <p><strong>Phone:</strong> +1-555-HEALTH (432-584)</p>
-                <p><strong>Email:</strong> appointments@healthcareplus.com</p>
-                
-                <h3>⏰ Office Hours</h3>
-                <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
-                <p><strong>Saturday:</strong> 9:00 AM - 3:00 PM</p>
-                <p><strong>Sunday:</strong> Closed</p>
-                
-                <h3>📍 Location</h3>
-                <p>123 Medical Center Drive<br>Your City, State 12345</p>
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="section-title">Meet Our Experienced Doctors</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">👨‍⚕️</div>
+                    <h3>Dr. Ahmad Rahman</h3>
+                    <div class="credentials">MD, MBBS, Family Medicine</div>
+                    <p>15 years of experience in family medicine. Specializes in preventive care, chronic disease management, and patient education. Fluent in English, Malay, and Tamil.</p>
+                    <div style="margin-top: 15px; color: #38a169; font-weight: bold;">
+                        📚 MBBS (UM), MD Family Medicine<br>
+                        🏥 Royal College of Physicians Member
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">👩‍⚕️</div>
+                    <h3>Dr. Sarah Lim</h3>
+                    <div class="credentials">MD, Pediatrics & Women's Health</div>
+                    <p>12 years specializing in pediatric care and women's health. Known for her gentle approach with children and comprehensive women's healthcare services.</p>
+                    <div style="margin-top: 15px; color: #38a169; font-weight: bold;">
+                        📚 MBBS (UKM), MD Pediatrics<br>
+                        🏥 Malaysian Pediatric Association
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">👨‍⚕️</div>
+                    <h3>Dr. Rajesh Kumar</h3>
+                    <div class="credentials">MD, Internal Medicine</div>
+                    <p>10 years in internal medicine with expertise in diabetes, hypertension, and heart disease management. Committed to preventive healthcare and patient wellness.</p>
+                    <div style="margin-top: 15px; color: #38a169; font-weight: bold;">
+                        📚 MBBS (IMU), MD Internal Medicine<br>
+                        🏥 Malaysian Medical Association
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">What Our Patients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Dr. Ahmad and his team provided exceptional care during my pregnancy. The online booking system made appointments so convenient, and the staff was always professional and caring."</p>
+                    <div class="patient-name">- Siti Nurhaliza, New Mother</div>
+                </div>
+                <div class="testimonial">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p>"I've been bringing my family here for 5 years. Dr. Sarah is wonderful with my children, and the telehealth services have been a lifesaver during busy weeks."</p>
+                    <div class="patient-name">- Marcus Tan, Father of Three</div>
+                </div>
+                <div class="testimonial">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p>"The urgent care service is fantastic. When I had a sudden illness, I was seen quickly without an appointment. Dr. Rajesh explained everything clearly and I felt much better knowing I was in good hands."</p>
+                    <div class="patient-name">- Fatimah Ali, Regular Patient</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Book Your Appointment Online</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">Schedule your visit in under 2 minutes. Choose your preferred doctor, date, and time.</p>
+            
+            <div class="booking-form">
+                <form>
+                    <div class="form-group">
+                        <label for="service">Select Service</label>
+                        <select id="service" name="service" required>
+                            <option value="">Choose a service...</option>
+                            <option value="family-medicine">Family Medicine Consultation</option>
+                            <option value="pediatric">Pediatric Visit</option>
+                            <option value="womens-health">Women's Health</option>
+                            <option value="urgent-care">Urgent Care</option>
+                            <option value="telehealth">Telehealth Consultation</option>
+                            <option value="lab-services">Lab Services</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="doctor">Preferred Doctor</label>
+                        <select id="doctor" name="doctor">
+                            <option value="">Any available doctor</option>
+                            <option value="dr-ahmad">Dr. Ahmad Rahman</option>
+                            <option value="dr-sarah">Dr. Sarah Lim</option>
+                            <option value="dr-rajesh">Dr. Rajesh Kumar</option>
+                        </select>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <select id="time" name="time" required>
+                                <option value="">Select time...</option>
+                                <option value="08:00">8:00 AM</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reason">Reason for Visit (Optional)</label>
+                        <textarea id="reason" name="reason" rows="3" placeholder="Brief description of your concern..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 20px; font-size: 1.2rem; padding: 18px;">
+                        📅 Book My Appointment
+                    </button>
+                    
+                    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">
+                        🔒 Your information is secure and HIPAA compliant. You'll receive a confirmation email within minutes.
+                    </p>
+                </form>
             </div>
             
-            <form class="booking-form">
-                <h3>Book Online Appointment</h3>
-                
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required>
+            <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+                <div>
+                    <h4>📱 Patient Portal</h4>
+                    <p>Access your medical records, test results, and message your doctor securely online.</p>
+                    <a href="#" style="color: #38a169; font-weight: bold;">Login Here →</a>
                 </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required>
+                <div>
+                    <h4>💳 Insurance</h4>
+                    <p>We accept most major insurance plans including BUPA, Allianz, and Great Eastern.</p>
+                    <a href="#" style="color: #38a169; font-weight: bold;">View Plans →</a>
                 </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
+                <div>
+                    <h4>💰 Transparent Pricing</h4>
+                    <p>No hidden fees. Clear, upfront pricing for all services. Payment plans available.</p>
+                    <a href="#" style="color: #38a169; font-weight: bold;">View Prices →</a>
                 </div>
-                
-                <div class="form-group">
-                    <label for="service">Service Needed</label>
-                    <select id="service" name="service">
-                        <option value="">Select a service</option>
-                        <option value="general">General Check-up</option>
-                        <option value="family">Family Medicine</option>
-                        <option value="vaccination">Vaccination</option>
-                        <option value="lab">Laboratory Services</option>
-                        <option value="sports">Sports Medicine</option>
-                        <option value="chronic">Chronic Disease Management</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="date">Preferred Date</label>
-                    <input type="date" id="date" name="date">
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Additional Notes</label>
-                    <textarea id="message" name="message" rows="3" placeholder="Please describe your symptoms or reason for visit"></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Book Appointment</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials -->
-<section class="testimonials">
-    <div class="container">
-        <h2 class="section-title">What Our Patients Say</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"Excellent care and very professional staff. Dr. Johnson took the time to listen to my concerns and provided thorough treatment."</p>
-                <p><strong>- Maria Rodriguez</strong></p>
-            </div>
-            <div class="testimonial">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"The online booking system is so convenient! The clinic is clean, modern, and the wait times are minimal."</p>
-                <p><strong>- John Smith</strong></p>
-            </div>
-            <div class="testimonial">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"Dr. Chen has been managing my diabetes for 3 years. Her expertise and caring approach have greatly improved my health."</p>
-                <p><strong>- Patricia Lee</strong></p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>HealthCare Plus Clinic</h3>
-                <p>Providing quality healthcare with compassion and professionalism since 2010.</p>
-                <p><strong>📞 +1-555-HEALTH</strong></p>
-                <p><strong>📧 info@healthcareplus.com</strong></p>
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li>📍 123 Wellness Boulevard<br>Shah Alam, Selangor 40000</li>
+                        <li>📞 +60-3-5123-4567</li>
+                        <li>✉️ info@harmonyfmc.com</li>
+                        <li>🕒 Mon-Fri: 8AM-6PM<br>Saturday: 8AM-2PM<br>Sunday: Closed</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#team">Meet Our Doctors</a></li>
+                        <li><a href="#booking">Book Appointment</a></li>
+                        <li><a href="#">Patient Portal</a></li>
+                        <li><a href="#">Insurance Plans</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Patient Resources</h3>
+                    <ul>
+                        <li><a href="#">New Patient Forms</a></li>
+                        <li><a href="#">Insurance Information</a></li>
+                        <li><a href="#">Prescription Refills</a></li>
+                        <li><a href="#">Test Results</a></li>
+                        <li><a href="#">Health Resources</a></li>
+                        <li><a href="#">Patient Rights</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Health Blog</a></li>
+                        <li><a href="#">Newsletter Signup</a></li>
+                    </ul>
+                    <div style="margin-top: 20px;">
+                        <h4>🏆 Certifications</h4>
+                        <p style="font-size: 0.9rem; color: #ccc;">
+                            ✓ HIPAA Compliant<br>
+                            ✓ Joint Commission Accredited<br>
+                            ✓ Malaysian Medical Council Licensed
+                        </p>
+                    </div>
+                </div>
             </div>
             
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#services">General Medicine</a></li>
-                    <li><a href="#services">Family Medicine</a></li>
-                    <li><a href="#services">Vaccinations</a></li>
-                    <li><a href="#services">Laboratory Services</a></li>
-                    <li><a href="#services">Sports Medicine</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#booking">Book Appointment</a></li>
-                    <li><a href="#team">Our Doctors</a></li>
-                    <li><a href="#">Patient Portal</a></li>
-                    <li><a href="#">Insurance</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Office Hours</h3>
-                <p><strong>Monday - Friday:</strong><br>8:00 AM - 6:00 PM</p>
-                <p><strong>Saturday:</strong><br>9:00 AM - 3:00 PM</p>
-                <p><strong>Sunday:</strong> Closed</p>
-                <p><strong>Emergency:</strong> Call 911</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Harmony Family Medical Center. All rights reserved. | <a href="#" style="color: #38a169;">Privacy Policy</a> | <a href="#" style="color: #38a169;">Terms of Service</a> | <a href="#" style="color: #38a169;">Accessibility</a></p>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script>
-    // Simple form submission handler
-    document.querySelector('.booking-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your appointment request! We will contact you within 24 hours to confirm your appointment.');
-    });
-    
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+    <script>
+        // Simple form validation and interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set minimum date to today
+            const dateInput = document.getElementById('date');
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.min = today;
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Form submission handling
+            const bookingForm = document.querySelector('.booking-form form');
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('🎉 Appointment request submitted! You will receive a confirmation email within 5 minutes. Our team will contact you to confirm your appointment time.');
             });
         });
-    });
-</script>
-</body></html>
+    </script>
+</body>
+</html>
